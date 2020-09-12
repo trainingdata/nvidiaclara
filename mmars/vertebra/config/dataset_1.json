@@ -1,0 +1,159 @@
+{
+    "description": "vertebral bodies segmentation",
+    "labels": {
+        "0": "background",
+        "1": "vertebralbodies"
+    },
+    "licence": "unknown",
+    "modality": {
+        "0": "MRI"
+    },
+    "name": "VertebralBodies",
+    "numTest": 25,
+    "numTraining": 106,
+    "reference": "xxxx",
+    "release": "1.0 01/01/2020",
+    "tensorImageSize": "3D",
+   "validation": [
+        {
+            "image": "T2_TSE_SAG__0130_008.npy",
+            "label": "T2_TSE_SAG__0130_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0131_008.npy",
+            "label": "T2_TSE_SAG__0131_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0132_008.npy",
+            "label": "T2_TSE_SAG__0132_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0133_008.npy",
+            "label": "T2_TSE_SAG__0133_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0134_008.npy",
+            "label": "T2_TSE_SAG__0134_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0136_008.npy",
+            "label": "T2_TSE_SAG__0136_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0137_008.npy",
+            "label": "T2_TSE_SAG__0137_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0138_008.npy",
+            "label": "T2_TSE_SAG__0138_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0139_008.npy",
+            "label": "T2_TSE_SAG__0139_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0140_008.npy",
+            "label": "T2_TSE_SAG__0140_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0143_008.npy",
+            "label": "T2_TSE_SAG__0143_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0144_008.npy",
+            "label": "T2_TSE_SAG__0144_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0145_008.npy",
+            "label": "T2_TSE_SAG__0145_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0146_008.npy",
+            "label": "T2_TSE_SAG__0146_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0147_008.npy",
+            "label": "T2_TSE_SAG__0147_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0148_008.npy",
+            "label": "T2_TSE_SAG__0148_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0149_008.npy",
+            "label": "T2_TSE_SAG__0149_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0150_008.npy",
+            "label": "T2_TSE_SAG__0150_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0151_008.npy",
+            "label": "T2_TSE_SAG__0151_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0152_008.npy",
+            "label": "T2_TSE_SAG__0152_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0153_008.npy",
+            "label": "T2_TSE_SAG__0153_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0154_008.npy",
+            "label": "T2_TSE_SAG__0154_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0155_008.npy",
+            "label": "T2_TSE_SAG__0155_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0156_008.npy",
+            "label": "T2_TSE_SAG__0156_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0157_008.npy",
+            "label": "T2_TSE_SAG__0157_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0158_008.npy",
+            "label": "T2_TSE_SAG__0158_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0160_008.npy",
+            "label": "T2_TSE_SAG__0160_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0162_008.npy",
+            "label": "T2_TSE_SAG__0162_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0163_008.npy",
+            "label": "T2_TSE_SAG__0163_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0164_008.npy",
+            "label": "T2_TSE_SAG__0164_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0165_008.npy",
+            "label": "T2_TSE_SAG__0165_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0166_008.npy",
+            "label": "T2_TSE_SAG__0166_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0167_008.npy",
+            "label": "T2_TSE_SAG__0167_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0168_008.npy",
+            "label": "T2_TSE_SAG__0168_008-mask.npy"
+        },
+        {
+            "image": "T2_TSE_SAG__0169_008.npy",
+            "label": "T2_TSE_SAG__0169_008-mask.npy"
+        }
+    ]
+}

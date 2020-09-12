@@ -1,0 +1,89 @@
+{
+    "description": "covid-19 segmentation",
+    "labels": {
+        "0": "background",
+        "1": "lung",
+        "2": "covid19infenction"
+    },
+    "licence": "unknown",
+    "modality": {
+        "0": "MRI"
+    },
+    "name": "Covid19Infection",
+    "numTest": 4,
+    "numTraining": 12,
+    "reference": "xxxx",
+    "release": "1.0 01/01/2020",
+    "tensorImageSize": "3D",
+    "test": [
+        "ct/coronacases_002.nii.gz",
+	"ct/radiopaedia_7_85703_0.nii.gz",
+        "ct/coronacases_003.nii.gz"
+    ],
+    "label_format": [3],
+    "training": [
+        {
+            "image": "ct/coronacases_001.nii.gz",
+            "label": "label/coronacases_001.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_010.nii.gz",
+            "label": "label/coronacases_010.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_004.nii.gz",
+            "label": "label/coronacases_004.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_005.nii.gz",
+            "label": "label/coronacases_005.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_006.nii.gz",
+            "label": "label/coronacases_006.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_008.nii.gz",
+            "label": "label/coronacases_008.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_10_85902_1.nii.gz",
+            "label": "label/radiopaedia_10_85902_1.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_27_86410_0.nii.gz",
+            "label": "label/radiopaedia_27_86410_0.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_29_86490_1.nii.gz",
+            "label": "label/radiopaedia_29_86490_1.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_29_86491_1.nii.gz",
+            "label": "label/radiopaedia_29_86491_1.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_36_86526_0.nii.gz",
+            "label": "label/radiopaedia_36_86526_0.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_40_86625_0.nii.gz",
+            "label": "label/radiopaedia_40_86625_0.nii.gz"
+        }
+
+    ],
+    "validation": [
+        {
+            "image": "ct/coronacases_009.nii.gz",
+            "label": "label/coronacases_009.nii.gz"
+        },
+        {
+            "image": "ct/radiopaedia_4_85506_1.nii.gz",
+            "label": "label/radiopaedia_4_85506_1.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_007.nii.gz",
+            "label": "label/coronacases_007.nii.gz"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "description": "covid-19 segmentation",
+    "labels": {
+        "0": "background",
+        "1": "lung",
+        "2": "covid19infenction"
+    },
+    "licence": "unknown",
+    "modality": {
+        "0": "CT"
+    },
+    "name": "Covid19Infection",
+    "numTest": 2,
+    "numTraining": 8,
+    "reference": "xxxx",
+    "release": "1.0 01/01/2020",
+    "tensorImageSize": "3D",
+    "test": [
+        "ct/coronacases_010.nii.gz"
+    ],
+    "label_format": [2],
+    "training": [
+        {
+            "image": "ct/coronacases_001.nii.gz",
+            "label": "label/coronacases_001.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_002.nii.gz",
+            "label": "label/coronacases_002.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_003.nii.gz",
+            "label": "label/coronacases_003.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_004.nii.gz",
+            "label": "label/coronacases_004.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_005.nii.gz",
+            "label": "label/coronacases_005.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_006.nii.gz",
+            "label": "label/coronacases_006.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_007.nii.gz",
+            "label": "label/coronacases_007.nii.gz"
+        },
+        {
+            "image": "ct/coronacases_008.nii.gz",
+            "label": "label/coronacases_008.nii.gz"
+        }
+    ],
+    "validation": [
+        {
+            "image": "ct/coronacases_009.nii.gz",
+            "label": "label/coronacases_009.nii.gz"
+        }
+    ]
+}

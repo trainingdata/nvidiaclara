@@ -1,0 +1,95 @@
+{
+  "version": "3",
+  "type": "segmentation",
+  "labels": [
+      "lung",
+      "covid19infection"
+  ],
+  "description": "A pre-trained model for volumetric (3D) segmentation of the Lung from CT image",
+  "pre_transforms": [
+    {
+      "name": "LoadNifti",
+      "args": {
+        "fields": ["image"],
+        "as_closest_canonical": false
+      }
+    },
+    {
+      "name": "ConvertToChannelsFirst",
+      "args": {
+        "fields": ["image"]
+      }
+    },
+    {
+      "name": "ScaleByResolution",
+      "args": {
+        "fields": ["image"],
+        "target_resolution": [1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "name": "ScaleIntensityRange",
+      "args": {
+        "fields": ["image"],
+        "a_min": -1500,
+        "a_max": 500,
+        "b_min": 0.0,
+        "b_max": 1.0,
+        "clip": true
+      }
+    }
+  ],
+  "inference": {
+    "image": "image",
+    "name": "TRTISInference",
+    "channel_first": true,
+    "batch_size": 1,
+    "roi": [
+        224,
+              224, 32
+      ],
+    "scanning_window": true,
+    "trtis": {
+      "channel_first": true,
+      "input_channels": {
+        "image": 1
+      },
+      "output_channels": {
+        "model": 3 
+      },
+      "platform": "tensorflow_graphdef",
+      "max_batch_size": 1 
+    },
+    "tf": {
+      "input_nodes": {
+        "image": "NV_MODEL_INPUT"
+      },
+      "output_nodes": {
+        "model": "NV_MODEL_OUTPUT"
+      }
+    }
+  },
+  "post_transforms": [
+    {
+      "name": "ArgmaxAcrossChannels",
+      "args": {
+        "fields": "model"
+      }
+    },
+    {
+      "name": "RestoreOriginalShape",
+      "args": {
+        "field": "model",
+        "src_field": "image",
+        "is_label": true
+      }
+    }
+  ],
+  "writer": {
+    "name": "WriteNifti",
+    "args": {
+      "field": "model",
+      "dtype": "uint8"
+    }
+  }
+}

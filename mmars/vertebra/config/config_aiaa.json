@@ -1,0 +1,105 @@
+{
+  "version": "2",
+  "type": "segmentation",
+  "labels": ["vertebral bodies"],
+  "description": "UNet for vertebral body segmentation (T2 images)",
+    "pre_transforms":
+        [
+            {
+                "name": "NumpyLoader",
+		"path": "CustomTransformations.NumpyLoader",
+                "args": {
+                    "fields": "image",
+                    "shape": "HW"
+                }
+            },
+            {
+                "name": "NumpyTransformation",
+		"path": "CustomTransformations.NumpyTransformation",
+                "args": {
+                    "fields":"image"
+                 }
+	    },
+	    {
+		"name": "ConvertToChannelsFirst",
+		"args": {
+	            "fields": "image"
+        	}
+	    }
+        ],
+  "inference": {
+    "image": "image",
+    "channel_first": true,
+    "scanning_window": false,
+    "batch_size": 1,
+      "roi":[384, 384],
+    "tf": {
+      "input_nodes": {
+        "image": "NV_MODEL_INPUT"
+      },
+      "output_nodes": {
+        "model": "NV_MODEL_OUTPUT"
+      }
+    },
+    "trtis": {
+      "input_channels": {
+        "image": 1
+      },
+      "output_channels": {
+        "model": 2
+      },
+      "gpu_instance_count": 1,
+      "max_batch_size": 8,
+      "platform":"tensorflow_graphdef",
+      "channel_first": true
+    }
+  },
+
+    "post_transforms": [
+    {
+		"name": "ConvertToChannelsFirst",
+		"args": {
+	            "fields": "image"
+        	}
+    },
+    {
+      "name":  "FilterProbabilityThreshold",
+		"path": "CustomTransformations-aiaa.FilterProbabilityThreshold",
+      "args": {
+        "label_field": "model",
+        "threshold": 0.5
+      }	    
+    },
+    {
+      "name": "MyLabelNPSqueeze",
+		"path": "CustomTransformations-aiaa.MyLabelNPSqueeze",
+      "args": {
+        "label_in": "model",
+        "label_out": "model"
+      }
+    },
+    {
+		"name": "ArgmaxAcrossChannels",
+		"args": {
+		    "fields": "model"
+		}
+    },
+            {
+	                        "name" : "RandomRotate2D",
+	                        "args" : {
+				                      "fields": "model",
+				                      "angle": 270,
+				                      "dtype": "uint8"
+				                    }
+	    }
+
+    ],
+    "writer": {
+	"name": "WriteNifti",
+	"args": {
+		"field" : "model",
+		"dtype" : "uint8",
+                "write_path": "{MMAR_EVAL_OUTPUT_PATH}" 
+	}
+    }
+}

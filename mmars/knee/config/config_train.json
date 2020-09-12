@@ -1,0 +1,126 @@
+{
+    "epochs": 2000,
+    "num_training_epoch_per_valid": 20,
+    "learning_rate": 5e-6,
+    "multi_gpu": false,
+    "use_amp": false,
+    "train": {
+        "loss": {
+            "name": "Dice",
+            "args": {
+                "data_format": "channels_first"
+            }
+        },
+        "optimizer": {
+            "name": "Adam"
+        },
+        "model": {
+            "name": "Unet",
+            "args": {
+                "num_classes": 7,
+		"use_batch_norm": true,
+		"use_group_norm": false,
+		"data_format": "channels_first"
+            }
+        },
+        "pre_transforms": 
+        [
+            {
+                "name": "NumpyLoader",
+		"path": "CustomTransformations.NumpyLoader",
+                "args": {
+                    "fields": [
+                        "image",
+                        "label"
+                    ],
+		    "shape": "HW"
+                }
+            },
+	    {
+                "name": "NumpyTransformation",
+		"path": "CustomTransformations.NumpyTransformation",
+                "args": {
+                    "fields": [
+                        "image"
+                    ]
+                }
+	    },
+	    {
+		"name": "ConvertToChannelsFirst",
+		"args": {
+	            "fields": ["image", "label"]
+        	}
+	    }
+        ],
+        "image_pipeline": {
+            "name": "SegmentationImagePipeline",
+            "args": {
+                
+                "data_list_file_path": "{DATASET_JSON}",
+                "data_file_base_dir": "{DATA_ROOT}",
+                "data_list_key": "training",
+                "output_crop_size": [320, 320],
+                "output_batch_size": 20,
+		"output_data_dims": 2
+            }
+        }
+    },
+    "validate": {
+        "metrics": 
+        [
+            {
+                "name": "ComputeAverageDice",
+                "args": {
+                    "name": "mean_dice",
+                    "is_key_metric": true,
+		    "is_2d": true,
+                    "field": "model",
+                    "label_field": "label"
+                }
+            }
+        ],
+        "pre_transforms":             
+        [
+            {
+                "name": "NumpyLoader",
+		"path": "CustomTransformations.NumpyLoader",
+                "args": {
+                    "fields": [
+                        "image",
+                        "label"
+                    ],
+		    "shape": "HW"
+                }
+            },
+	    {
+                "name": "NumpyTransformation",
+		"path": "CustomTransformations.NumpyTransformation",
+                "args": {
+                    "fields": [
+                        "image"
+                    ]
+                }
+	    },
+	    {
+		"name": "ConvertToChannelsFirst",
+		"args": {
+	            "fields": ["image", "label"]
+        	}
+	    }
+        ],
+        "image_pipeline": {
+            "name": "SegmentationImagePipeline",
+            "args": {
+                "data_list_file_path": "{DATASET_JSON}",
+                "data_file_base_dir": "{DATA_ROOT}",
+                "data_list_key": "validation",
+                "output_crop_size": [320, 320],
+                "output_batch_size" : 1,
+		"output_data_dims": 2
+            }
+        },
+        "inferer": {
+            "name": "TFSimpleInferer"
+        }
+    }
+}

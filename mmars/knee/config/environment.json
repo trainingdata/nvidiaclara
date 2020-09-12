@@ -1,0 +1,10 @@
+{
+  "DATA_ROOT": "/workspace/mmars/knee/data",
+  "DATASET_JSON": "/workspace/mmars/knee/config/dataset_0.json",
+  "DATASET_VAL_JSON": "/workspace/mmars/knee/config/dataset_0.json",
+  "PROCESSING_TASK": "segmentation",
+  "MMAR_CKPT_DIR": "/workspace/mmars/knee/models",
+  "MMAR_EVAL_OUTPUT_PATH": "/workspace/mmars/knee/eval",
+  "DATA_LIST_KEY": "validation"
+
+}

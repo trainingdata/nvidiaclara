@@ -1,0 +1,77 @@
+{
+  "description": "vertebral bodies segmentation",
+  "label_format": [
+    1
+  ],
+  "labels": {
+    "0": "background",
+    "1": "FemurCartilage",
+    "2": "TibiaCartilage",
+    "3": "FemurBone",
+    "4": "Tibiabone",
+    "5": "Meniscus",
+    "6": "PatellaCartilage"
+  },
+  "licence": "unknown",
+  "modality": {
+    "0": "MRI"
+  },
+  "name": "VertebralBodies",
+  "numTest": 1,
+  "numTraining": 1,
+  "reference": "xxxx",
+  "release": "1.0 01/01/2020",
+  "tensorImageSize": "3D",
+  "test": [
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00021_9d5f25b12f3935ec.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00031_ff267152a58cab3a.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00008_c7d67ccfb717c2af.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00030_9e635a991cec2f74.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00003_aa3f2a29a4a7ddab.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00020_bd19a83a8fad7b39.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00024_3f3d436c110b80c2.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00013_74509f2de712a5b7.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00007_7b98c3e21d89cfbe.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00012_b8b66661043307fa.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00010_84a06ed372c3430d.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00034_a6869e0ad2a5869a.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00025_536d3ad8b129a1f7.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00028_205b036f3d159cac.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00029_478737e8724ba475.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00011_0433663a86bbb742.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00015_86db6b22080b14eb.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00027_ec8e21fa80129bbd.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00032_8a8d91241cef744f.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00023_18032764fceb9a57.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00018_2f152f75c53ad930.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00009_87c1020f5a674e14.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00035_d1a05256e5256ca1.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00002_abfbda17266dfe8f.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00016_060c6d52342c2836.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00014_b9299eb9c95562aa.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00001_4d72d65cc3e86d27.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00005_c225349d7e421121.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00004_4807d032bf9bc5ac.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00022_cfeb49caec072795.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00036_22e59fa049c009fd.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00006_8ebb850128fe2b3b.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00033_2e39ecc80caade23.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00019_a86d5d90606b290a.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00017_fabca2f98ea85b7a.npy",
+    "OpenSource_knee/1FB_1002667144____1FB_5654730521_MR8_374fc177/00026_c1c05882f17b1518.npy",
+    "OpenSource_knee/1FB_1031170224____1FB_4691863810_MR7_c2e33b0f/00001_f3b4430edf9abf97.npy",
+    "OpenSource_knee/1FB_1031170224____1FB_4691863810_MR7_c2e33b0f/00028_26a12b41b7de6a46.npy"
+  ],
+  "training": [
+    {
+      "image": "/var/nvidia/aiaa/samples/knee/images/00007_2122e5068cbc032f.npy",
+      "label": "/var/nvidia/aiaa/samples/knee/labels/00007_2122e5068cbc032f.npy"
+    }
+  ],
+  "validation": [
+    {
+      "image": "/var/nvidia/aiaa/samples/knee/images/00005_b534cc8c0e21b496.npy",
+      "label": "/var/nvidia/aiaa/samples/knee/labels/00005_b534cc8c0e21b496.npy"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "DATA_ROOT": "workspace/mmars/covid19/trainingdataio_covid19_ct_lung_seg_v1/data",
+  "DATASET_JSON": "/workspace/mmars/covid19/trainingdataio_covid19_ct_lung_seg_v1/config/dataset_0.json",
+  "DATASET_VAL_JSON": "/workspace/mmars/covid19/trainingdataio_covid19_ct_lung_seg_v1/config/dataset_0.json",
+  "PROCESSING_TASK": "segmentation",
+  "MMAR_CKPT_DIR": "/workspace/mmars/covid19/trainingdataio_covid19_ct_lung_seg_v1/models",
+  "MMAR_EVAL_OUTPUT_PATH": "/workspace/mmars/covid19/trainingdataio_covid19_ct_lung_seg_v1/eval",
+  "DATA_LIST_KEY": "validation",
+  "PRETRAIN_WEIGHTS_FILE": "/workspace/mmars/covid19/trainingdataio_covid19_ct_lung_seg_v1/config/model.ckpt"
+}
+

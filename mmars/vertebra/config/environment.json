@@ -1,0 +1,9 @@
+{
+  "DATA_ROOT": "/data/training/data",
+  "DATASET_JSON": "/data/training/config/dataset_0.json",
+  "DATASET_VAL_JSON": "/data/training/config/dataset_0.json",
+  "PROCESSING_TASK": "segmentation",
+  "MMAR_CKPT_DIR": "/data/training/models",
+  "MMAR_EVAL_OUTPUT_PATH": "/data/training/eval",
+  "DATA_LIST_KEY": "validation"
+}
