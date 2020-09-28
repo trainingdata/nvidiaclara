@@ -2,7 +2,7 @@
 
 my_dir="$(dirname "$0")"
 #. $my_dir/set_env.sh
-export MMAR_ROOT=/var/nvidia/aiaa/mmars/knee/
+export MMAR_ROOT=/var/nvidia/aiaa/mmars/knee2d/
 
 echo "MMAR_ROOT set to $MMAR_ROOT"
 
