@@ -1,10 +1,10 @@
 {
-  "DATA_ROOT": "/workspace/mmars/knee/data",
-  "DATASET_JSON": "/workspace/mmars/knee/config/dataset_0.json",
-  "DATASET_VAL_JSON": "/workspace/mmars/knee/config/dataset_0.json",
+  "DATA_ROOT": "/workspace/mmars/knee2d/data",
+  "DATASET_JSON": "/workspace/mmars/knee2d/config/dataset_0.json",
+  "DATASET_VAL_JSON": "/workspace/mmars/knee2d/config/dataset_0.json",
   "PROCESSING_TASK": "segmentation",
-  "MMAR_CKPT_DIR": "/workspace/mmars/knee/models",
-  "MMAR_EVAL_OUTPUT_PATH": "/workspace/mmars/knee/eval",
+  "MMAR_CKPT_DIR": "/workspace/mmars/knee2d/models",
+  "MMAR_EVAL_OUTPUT_PATH": "/workspace/mmars/knee2d/eval",
   "DATA_LIST_KEY": "validation"
 
 }

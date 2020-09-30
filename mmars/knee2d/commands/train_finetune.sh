@@ -15,7 +15,7 @@ python3 -u  -m nvmidl.apps.train \
     -c $CONFIG_FILE \
     -e $ENVIRONMENT_FILE \
     --set \
-    DATASET_JSON=$MMAR_ROOT/config/dataset_aiaa.json \
+    DATASET_JSON=$MMAR_ROOT/../../samples/knee2d/dataset.json \
     epochs=2000 \
     learning_rate=0.000005 \
     num_training_epoch_per_valid=20 \
